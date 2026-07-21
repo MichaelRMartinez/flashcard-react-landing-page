@@ -1,20 +1,21 @@
-import React from "react";
 import { howItWorksItems } from "../constant/data";
+import { motion } from "motion/react";
+import * as V from '../motion/index'
 
 export default function HotItWorks() {
   return (<>
     <section className="py-20 lg:py-24">
-      <div className="container">
+      <motion.div variants={V.staggerContainer} initial="hidden" whileInView={"show"} viewport={{once:true}} className="container">
         {/* TITLE */}
         <div className="text-center mb-12">
-          <span className="section-tag">How It Works</span>
-          <h2 className="text-3xl sm:text-4xl font-black mt-4 tracking-tight">Up and studying in 60 seconds</h2>
+          <motion.span variants={V.fadeIn} className="section-tag">How It Works</motion.span>
+          <motion.h2 variants={V.fadeIn}  className="text-3xl sm:text-4xl font-black mt-4 tracking-tight">Up and studying in 60 seconds</motion.h2>
         </div>
 
         {/* WRAPPER */}
         <div className="flex flex-col max-w-3xl mx-auto">
           {howItWorksItems.map(({ num, color, title, desc }, i, arr) => (
-            <div key={num} className="flex gap-5">
+            <motion.div variants={V.fadeIn}  key={num} className="flex gap-5">
               {/* STEP INDICATOR */}
               <div className="flex flex-col items-center">
                 {/* NUM */}
@@ -29,10 +30,10 @@ export default function HotItWorks() {
                 <h3 className="text-lg font-bold mb-1">{title}</h3>
                 <p className="text-md leading-relaxed text-neutral-800">{desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   </>);
 }
