@@ -72,15 +72,15 @@ export const statsItems = [
     label: "Mastery levels per card",
     color: "#f72585",
   },
-  { value: "Inf", label: "Cards you can create", color: "#2de2b0" },
+  { value: "Inf", label: "Cards you can create", color: "#21a581" },
   {
     value: "1 click",
     label: "To reveal any answer",
-    color: "#f4b942",
+    color: "#b78b32",
   },
   {
     value: "Free",
     label: "Forever, no credit card",
-    color: "#7b9cff",
+    color: "#4d6ed1",
   },
 ];

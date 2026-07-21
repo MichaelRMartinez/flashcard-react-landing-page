@@ -1,4 +1,6 @@
 import { statsItems } from "../constant/data";
+import { motion } from "motion/react";
+import * as V from '../motion/index'
 
 export default function Stats() {
   return (<>

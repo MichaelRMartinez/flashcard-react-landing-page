@@ -13,11 +13,8 @@ export default function App() {
       <main>
         <Hero />
         <Features />
-        <hr className="divider" />
         <HowItWorks />
-        <hr className="divider" />
         <Stats />
-        <hr className="divider" />
         <Cta />
       </main>
       <Footer />
