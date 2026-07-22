@@ -1,5 +1,5 @@
 import { BookOpen, Menu, X } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Header() {
 
