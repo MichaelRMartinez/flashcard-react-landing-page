@@ -1,11 +1,13 @@
 import { ArrowRight, Target } from "lucide-react"
+import { motion } from "motion/react";
+import * as V from '../motion/index'
 
 export default function Cta() {
   return(<>
     <section className="py-20 px-4">
       {/* WRAPPER */}
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="hero-card p-10 sm:p-16 relative overflow-hidden">
+      <motion.div variants={V.staggerContainer} initial="hidden" whileInView={"show"} viewport={{ once:true }} className="max-w-4xl mx-auto text-center">
+        <motion.div variants={V.scale} className="hero-card p-10 sm:p-16 relative overflow-hidden">
           {/* BACKGROUND ACCENT */}
           <div 
             aria-hidden="true"
@@ -32,8 +34,8 @@ export default function Cta() {
               <ArrowRight size={20} />
             </a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   </>);
 }
